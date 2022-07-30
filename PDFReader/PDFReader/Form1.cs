@@ -28,7 +28,7 @@ namespace PDFReader
             if (!string.IsNullOrEmpty(folderPath))
             {
                 var fileinfo = new FileInfo(pdfPath);
-                File.Copy(pdfPath, folderPath+"\\"+fileinfo.Name);
+                File.Copy(pdfPath, folderPath+"\\"+fileinfo.Name,true);
                 Process myProcess = new Process();
                 myProcess.StartInfo.FileName = "Acrobat.exe";
                 myProcess.StartInfo.Arguments = "/A \"nameddest=Test2\" "+ folderPath + "\\" + fileinfo.Name + "";
