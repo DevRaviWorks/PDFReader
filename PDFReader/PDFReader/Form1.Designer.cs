@@ -31,6 +31,7 @@ namespace PDFReader
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PDF_Reader = new AxAcroPDFLib.AxAcroPDF();
+            this.btn_coppy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PDF_Reader)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,12 +47,24 @@ namespace PDFReader
             this.PDF_Reader.Size = new System.Drawing.Size(545, 327);
             this.PDF_Reader.TabIndex = 0;
             // 
+            // btn_coppy
+            // 
+            this.btn_coppy.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_coppy.Location = new System.Drawing.Point(0, 416);
+            this.btn_coppy.Name = "btn_coppy";
+            this.btn_coppy.Size = new System.Drawing.Size(800, 34);
+            this.btn_coppy.TabIndex = 1;
+            this.btn_coppy.Text = "Copy";
+            this.btn_coppy.UseVisualStyleBackColor = true;
+            this.btn_coppy.Click += new System.EventHandler(this.btn_coppy_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_coppy);
             this.Controls.Add(this.PDF_Reader);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -63,6 +76,7 @@ namespace PDFReader
         #endregion
 
         private AxAcroPDFLib.AxAcroPDF PDF_Reader;
+        private System.Windows.Forms.Button btn_coppy;
     }
 }
 
